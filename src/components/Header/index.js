@@ -10,19 +10,20 @@ import MobileSearchBar from "../MobileSearchBar";
 function Header() {
   return (
     <div className="navbar">
-      <img src={logo} alt="logo" className="navbar-logo" />
+      <div className="navbar-container">
+        <img src={logo} alt="logo" className="navbar-logo" /></div>
       <div className="search-bar">
         <div className="search-bar-text">Anywhere</div>
         <div className="search-bar-text">Any Week</div>
         <div className="search-bar-text2">Add guests</div>
         <div className="search-icon-div">
-          <SearchRoundedIcon className="search-icon" />
+          <SearchRoundedIcon style={{ width: '1.15rem', height: '1.15rem' }} className="search-icon" />
         </div>
       </div>
       <div className="profile-container">
         <div className="airbnb-your-home">Airbnb your home</div>
         <div className="airbnb-your-home">
-          <LanguageIcon sx={{ fontSize: "1.3rem" }} />
+          <LanguageIcon sx={{ fontSize: "1.2rem" }} />
         </div>
         <div className="profile-div">
           <BasicMenu />

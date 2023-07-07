@@ -3,10 +3,13 @@
 :root {
   --black: #000;
   --grey: #ddd;
-  --font-grey: #717171;
+  --font-grey: hsl(0, 0%, 40%);
+  --dark-grey: hsl(0, 0%, 5%);
   --white: #ffffff;
   --theme: #ff385c;
   --light-grey: #f7f7f7;
+  --swiper-theme-color: #000 !important;
+  --swiper-navigation-size: 0.6rem !important;
 }
 
 body {

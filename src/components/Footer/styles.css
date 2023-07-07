@@ -1,0 +1,41 @@
+.footer {
+    margin: 0 1.5rem 0 2.6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem 0;
+    border-top: 1px solid var(--grey);
+}
+
+.footer-left {
+    display: flex;
+    font-size: 0.9rem;
+    gap: 0.4rem;
+    align-items: center;
+}
+
+.footer-right {
+    display: flex;
+    align-items: center;
+}
+
+.footer-icon {
+    margin-left: 8px;
+}
+
+.language {
+    display: flex;
+    pointer-events: auto;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    border: none;
+    background-color: var(--white);
+    font-weight: 600;
+}
+
+.icon {
+    margin-right: 0.4rem;
+}

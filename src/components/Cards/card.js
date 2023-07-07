@@ -27,16 +27,16 @@ function Card({ card }) {
         ))}
       </Swiper>
       <div className="card-info-flex">
-        <h3 className="card-title">{card.title}</h3>
+        <h4 className="card-title">{card.title}</h4>
         <div className="card-rating">
-          <StarRateRoundedIcon />
+          <StarRateRoundedIcon sx={{ width: "1.1rem" }}/>
           <p>{card.rating}</p>
         </div>
       </div>
-      <p style={{ margin: 0, color: "var(--font-grey)" }}>{card.desc}</p>
+      <p style={{ margin: 0, color: "var(--font-grey)" }}>Stay with {card.desc}</p>
       <p style={{ margin: 0, color: "var(--font-grey)" }}>{card.date}</p>
-      <p style={{ margin: "0.2rem", fontSize: "1rem", color: "var(--black" }}>
-        <span style={{ fontWeight: "600" }}>₹{card.price}</span> night
+      <p style={{ margin: "0.2rem", color: "var(--black" }}>
+        <span style={{ fontWeight: "700" }}>${card.price}</span> night
       </p>
     </div>
   );
