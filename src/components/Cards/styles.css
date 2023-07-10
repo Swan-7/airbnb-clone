@@ -10,6 +10,7 @@
 .card-box {
   margin: 0.8rem;
   margin-bottom: 2rem;
+  position: relative;
 }
 
 .swiper-container {
@@ -42,9 +43,56 @@ p {
   font-size: 0.92rem;
 }
 
+.hover-effect {
+  transition-duration: 300ms;
+  transition-timing-function: ease-out;
+}
+
+.hover-effect:hover {
+  transform: scale(1.05);
+}
+
+
 .card-box .swiper-pagination-bullet-active {
   background-color: var(--white) !important;
 }
+
+.favorite-button {
+  position: absolute;
+  top: 3%;
+  right: 0;
+  z-index: 999;
+  background: transparent;
+  color: #fff;
+  overflow: hidden;
+}
+
+.card-box .swiper-button-prev,
+.card-box .swiper-button-next {
+  background-color: transparent !important;
+  top: 50% !important; 
+  opacity: 0;  
+  transition: opacity 0.3s;
+  height: 2rem !important;
+  margin-top: 0 !important;
+  z-index: 999 !important;
+}
+
+.card-box .swiper-button-prev::after,
+.card-box .swiper-button-next::after {
+  background-image: none !important;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  opacity: 1;
+}
+
+.swiper-button-prev:hover::after,
+.swiper-button-next:hover::after {
+  /* background-color: var(--white) !important; */
+}
+
 
 @media only screen and (max-width: 1000px) {
   .swiper-container,
@@ -59,7 +107,7 @@ p {
   .card-img {
     height: 50%;
     max-height: 400px;
-    width: 90vw;
+    width: 80vw;
   }
 
   .cards-flex {

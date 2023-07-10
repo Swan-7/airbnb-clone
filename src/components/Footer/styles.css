@@ -1,4 +1,14 @@
 .footer {
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    bottom: 0;
+    background-color: var(--white);
+    width: 100%;
+}
+
+.footer-container {
+    /* position: fixed; */
     margin: 0 1.5rem 0 2.6rem;
     display: flex;
     justify-content: space-between;
@@ -38,4 +48,24 @@ button {
 
 .icon {
     margin-right: 0.4rem;
+}
+
+.map {
+    position: fixed;
+    background-color: #000;
+    color: var(--white);
+    padding: 14px 19px;
+    cursor: pointer;
+    right: 45%;
+    border-radius: 27px;
+    display: flex;
+    gap: 0.7rem;
+    bottom: 5.5rem;
+    font-size: 0.8rem;
+}
+
+@media only screen and (max-width: 800px) {
+    .footer {
+        display: none;
+    }
 }

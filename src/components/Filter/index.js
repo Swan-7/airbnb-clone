@@ -19,7 +19,16 @@ function Filter({ selectedFilter, setSelectedFilter }) {
     <div className="filter-container">
       <div className={`cover ${isScrolled ? 'scrolled' : ''}`}>
         <Swiper
-          slidesPerView={13}
+        breakpoints={{
+          320: {
+            width: 320,
+            slidesPerView: 4,
+          },
+          800: {
+            width: 768,
+            slidesPerView: 11,
+          }
+        }}
           spaceBetween={20}
           cssMode={true}
           navigation={true}
@@ -28,10 +37,7 @@ function Filter({ selectedFilter, setSelectedFilter }) {
           modules={[Navigation, Mousewheel, Keyboard]}
           className="mySwiper filter-div"          
           onSwiper={(swiper) => (swiperRef.current = swiper)}
-          onSlideChange={() => {
-            handleScroll();
-            // console.log({ activeIndex, snapIndex, previousIndex, realIndex });
-          }}
+          onSlideChange={() => {handleScroll()}}
           >
             {links.map((item, i) => (
               <SwiperSlide

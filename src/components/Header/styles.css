@@ -1,15 +1,19 @@
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2.5rem;
   position: sticky;
   top: 0;
   background-color: var(--white);
   z-index: 1000;
+  display: grid;
 }
 
 .navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2.5rem;
+}
+
+.logo {
   flex: 1 0 140px;
 }
 
@@ -22,10 +26,14 @@
   justify-content: flex-start;
   align-items: center;
   gap: 1.4rem;  
-  padding: 0.4rem 0.5rem 0.4rem 1rem;
+  padding: 0.4rem 0.8rem 0.4rem 1rem;
   border: 1px solid var(--grey);
   border-radius: 2rem;
   box-shadow: 0 1px 2px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 5%);
+}
+
+.search-text {
+  display: flex;
 }
 
 .search-bar:hover {
@@ -34,11 +42,20 @@
   cursor: pointer;
 }
 
+.search-group {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 0.7rem;  
+  gap: 0.7rem;
+}
+
 .search-bar-text {
   font-size: 0.85rem;
   font-weight: 600;
   border-right: 1px solid var(--grey);
   padding-right: 0.5rem;
+  white-space: nowrap;
 }
 
 .search-bar-text2 {
@@ -46,6 +63,7 @@
   font-weight: 600;
   color: var(--font-grey);
   padding-right: 0.5rem;
+  white-space: nowrap;
 }
 
 .search-icon-div {
@@ -56,6 +74,16 @@
   padding: 0.45rem;
   border-radius: 50%;
   color: var(--white);
+}
+
+.search-icon-mobile {
+  display: none;
+}
+
+.space-dot {
+  display: none;
+  transform: translate(0%, -25%);
+  padding: 0 0.3rem;
 }
 
 .profile-container {
@@ -95,14 +123,25 @@
   color: var(--font-grey);
 }
 
+
+.filter-icon {
+  display: none;
+}
+
 .bottom-nav {
   display: none;
 }
 
 @media only screen and (max-width: 800px) {
-  .search-bar,
+  .logo,
+  .profile-container,
   .airbnb-your-home {
     display: none;
+  }
+
+  .search-bar {
+    width: 100%;
+    margin-left: -2rem;
   }
 
   .navbar {
@@ -110,10 +149,54 @@
     padding-right: 1.5rem;
   }
 
+  .search-text {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .search-icon-mobile {
+    display: block;
+  }
+
+  
+.filter-icon {
+  display: block;
+  float: right;
+  border: 1px solid var(--grey);
+  border-radius: 50%;
+  padding: 0.4rem;
+  margin-left: auto;
+}
+
+  .search-group {
+    margin-left: 0;
+    gap: 0rem;
+    color: var(--font-grey);
+  }
+
+  .search-icon-div{
+    display: none;
+  }
+
+  .space-dot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   .profile-menu-flex {
     position: fixed;
     top: 0.5rem;
     right: 1.5rem;
+  }
+
+  .search-bar-text {
+    border-right: 0px;
+  }
+
+  .text-2 {
+    font-size: 0.7rem;
+    padding: 0;
   }
 
   .bottom-nav {
