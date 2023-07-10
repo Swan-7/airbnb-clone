@@ -5,7 +5,7 @@
   position: sticky;
   gap: 1.4rem;
   left: 0;
-  z-index: 9999;
+  z-index: 999;
   background-color: var(--white);
 }
 

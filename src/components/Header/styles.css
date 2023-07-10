@@ -132,6 +132,10 @@
   display: none;
 }
 
+.profile.menu {
+  z-index: 9999;
+}
+
 @media only screen and (max-width: 800px) {
   .logo,
   .profile-container,

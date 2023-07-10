@@ -16,7 +16,7 @@ export default function BasicMenu() {
   };
 
   return (
-    <div>
+    <div className="profile-menu">
       <div
         id="basic-button"
         aria-controls={open ? "basic-menu" : undefined}
