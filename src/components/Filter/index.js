@@ -47,9 +47,9 @@ function Filter({ selectedFilter, setSelectedFilter }) {
                   setSelectedFilter(i);
                 }}
               >
-                <img src={item.imgSrc} className="links-img" />
+                <img src={item.imgSrc} className="links-img" alt=""/>
                 <p
-                  className={`links-label ${i == selectedFilter && "selected-label"}`}
+                  className={`links-label ${i === selectedFilter && "selected-label"}`}
                 >
                   {item.label}
                 </p>
