@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useRef } from "react";
+import { useState } from "react";
 import "./styles.css";
 import StarRateRoundedIcon from "@mui/icons-material/StarRateRounded";
 import FavoriteIcon from '@mui/icons-material/Favorite';
@@ -32,7 +32,7 @@ function Card({ card }) {
       >
         {card.imgSrc.map((src, i) => (
           <SwiperSlide key={i}>
-            <img src={src} className="card-img" />
+            <img src={src} className="card-img" alt="card"/>
           </SwiperSlide>
         ))}
       </Swiper>

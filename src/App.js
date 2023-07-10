@@ -15,7 +15,7 @@ function App() {
         selectedFilter={selectedFilter}
         setSelectedFilter={setSelectedFilter}
       />
-      {selectedFilter == 0 ? <Cards list={list} /> : <Cards list={list2} />}
+      {selectedFilter === 0 ? <Cards list={list} /> : <Cards list={list2} />}
       <Footer/>
     </div>
   );

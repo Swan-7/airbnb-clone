@@ -42,7 +42,7 @@ function Filter({ selectedFilter, setSelectedFilter }) {
             {links.map((item, i) => (
               <SwiperSlide
                 key={i}
-                className={`links-box ${i == selectedFilter && "selected-box"}`}
+                className={`links-box ${i === selectedFilter && "selected-box"}`}
                 onClick={() => {
                   setSelectedFilter(i);
                 }}
