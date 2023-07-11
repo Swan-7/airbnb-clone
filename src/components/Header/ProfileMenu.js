@@ -16,7 +16,7 @@ export default function BasicMenu() {
   };
 
   return (
-    <div className="profile-menu">
+    <div className="profile-menu cursor-pointer">
       <div
         id="basic-button"
         aria-controls={open ? "basic-menu" : undefined}

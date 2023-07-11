@@ -134,6 +134,8 @@
 
 .profile.menu {
   z-index: 9999;
+  position: absolute;
+  left: 1038px !important;
 }
 
 @media only screen and (max-width: 800px) {
@@ -155,6 +157,7 @@
 
   .search-text {
     flex-direction: column;
+    margin-right: 2rem;
     align-items: flex-start;
   }
 

@@ -32,25 +32,27 @@ function Card({ card }) {
       >
         {card.imgSrc.map((src, i) => (
           <SwiperSlide key={i}>
-            <img src={src} className="card-img" alt="card"/>
+            <img src={src} className="card-img cursor-pointer" alt="card"/>
           </SwiperSlide>
         ))}
       </Swiper>
-      <button className="favorite-button" onClick={handleFavoriteClick}>
+      <button className="favorite-button cursor-pointer" onClick={handleFavoriteClick}>
         {isFavorite ? <FavoriteIcon /> : <FavoriteBorderIcon />}
       </button>
-      <div className="card-info-flex">
+      <div className="card-info-flex cursor-pointer">
         <h4 className="card-title">{card.title}</h4>
         <div className="card-rating">
           <StarRateRoundedIcon sx={{ width: "1.1rem" }}/>
           <p>{card.rating}</p>
         </div>
       </div>
+      <div className="cursor-pointer">
       <p style={{ margin: 0, color: "var(--font-grey)" }}>Stay with {card.desc}</p>
       <p style={{ margin: 0, color: "var(--font-grey)" }}>{card.date}</p>
       <p style={{ margin: "0.2rem", color: "var(--black" }}>
         <span style={{ fontWeight: "700" }}>${card.price}</span> night
       </p>
+      </div>
     </div>
   );
 }
